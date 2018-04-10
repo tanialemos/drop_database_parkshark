@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>be.dropdatabase.parkshark</groupId>
-    <artifactId>domain</artifactId>
+    <artifactId>utilities</artifactId>
     <version>1.0</version>
-
+    
 </project>

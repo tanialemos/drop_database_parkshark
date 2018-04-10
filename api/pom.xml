@@ -11,7 +11,18 @@
     </parent>
 
     <groupId>be.dropdatabase.parkshark</groupId>
-    <artifactId>domain</artifactId>
+    <artifactId>api</artifactId>
     <version>1.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>be.dropdatabase.parkshark</groupId>
+            <artifactId>service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
