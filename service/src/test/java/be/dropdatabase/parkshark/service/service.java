@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.service;
+package be.dropdatabase.parkshark.api;
 
 public class service {
 }
