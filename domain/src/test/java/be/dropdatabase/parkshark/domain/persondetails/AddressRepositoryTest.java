@@ -24,13 +24,7 @@ public class AddressRepositoryTest {
         Address actualAddress = new Address("Rue de la Montagne", "25", pc);
         addressRepository.save(actualAddress);
 
-        List<Address> addresses = addressRepository.findByStreetName("Rue de la Montagne");
-
-        Assertions.assertThat(addresses).contains(actualAddress);
-
+        Assertions.assertThat(actualAddress.getAddressId()).isNotNull();
     }
 
-//    @Test
-//    public void findById() {
-//    }
 }
