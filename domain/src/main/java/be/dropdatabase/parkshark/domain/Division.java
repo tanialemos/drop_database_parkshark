@@ -22,7 +22,10 @@ public class Division {
 
     public Division() {
     }
-
-
-
+    public Division(String divisionName, String originalName, String director, Division parentDivision) {
+        this.divisionName = divisionName;
+        this.originalName = originalName;
+        this.director = director;
+        this.parentDivision = parentDivision;
+    }
 }
