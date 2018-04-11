@@ -19,8 +19,10 @@ public class Address {
     @JoinColumn(name = "POSTALCODE_ID")
     private PostalCode postalCode;
 
-    public Address(long addressId, String streetName, String streetNumber, PostalCode postalCode) {
-        this.addressId = addressId;
+    public Address() {
+    }
+
+    public Address(String streetName, String streetNumber, PostalCode postalCode) {
         this.streetName = streetName;
         this.streetNumber = streetNumber;
         this.postalCode = postalCode;

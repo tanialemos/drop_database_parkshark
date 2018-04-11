@@ -21,8 +21,7 @@ public class PostalCode {
     public PostalCode() {
     }
 
-    public PostalCode(long postalCodeId, String postalCode, String postalCodeLabel) {
-        this.postalCodeId = postalCodeId;
+    public PostalCode(String postalCode, String postalCodeLabel) {
         this.postalCode = postalCode;
         this.postalCodeLabel = postalCodeLabel;
     }
