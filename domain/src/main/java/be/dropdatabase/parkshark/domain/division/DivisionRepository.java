@@ -18,4 +18,10 @@ public class DivisionRepository {
         entityManager.persist(division);
         return division;
     }
+
+    public Division findByName(String divisionName){
+        return entityManager.createQuery("from Divisions where divisionName = :divisionName", Division.class)
+                .setParameter("divisionName", divisionName)
+                .getSingleResult();
+    }
 }
