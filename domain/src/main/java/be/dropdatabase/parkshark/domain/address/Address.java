@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.domain.persondetails;
+package be.dropdatabase.parkshark.domain.address;
 
 import javax.persistence.*;
 

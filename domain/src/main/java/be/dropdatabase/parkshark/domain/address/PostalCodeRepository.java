@@ -1,6 +1,5 @@
-package be.dropdatabase.parkshark.domain.persondetails;
+package be.dropdatabase.parkshark.domain.address;
 
-import javafx.geometry.Pos;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

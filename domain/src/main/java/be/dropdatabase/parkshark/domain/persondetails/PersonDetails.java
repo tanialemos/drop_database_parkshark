@@ -1,5 +1,7 @@
 package be.dropdatabase.parkshark.domain.persondetails;
 
+import be.dropdatabase.parkshark.domain.address.Address;
+
 import javax.persistence.*;
 
 @Entity

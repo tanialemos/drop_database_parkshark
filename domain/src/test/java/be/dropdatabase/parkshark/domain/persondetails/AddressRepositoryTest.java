@@ -1,11 +1,13 @@
 package be.dropdatabase.parkshark.domain.persondetails;
 
+import be.dropdatabase.parkshark.domain.address.Address;
+import be.dropdatabase.parkshark.domain.address.AddressRepository;
+import be.dropdatabase.parkshark.domain.address.PostalCode;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 
 public class AddressRepositoryTest {
