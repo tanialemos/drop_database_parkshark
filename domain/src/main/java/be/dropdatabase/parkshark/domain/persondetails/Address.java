@@ -1,10 +1,22 @@
 package be.dropdatabase.parkshark.domain.persondetails;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "ADDRESSES")
 public class Address {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ADDRESSES_SEQ")
+    @SequenceGenerator(name = "ADDRESSES_SEQ", sequenceName = "ADDRESSES_SEQ", allocationSize = 1, initialValue = 1)
+    @Column(name = "ADDRESS_ID")
     private long addressId;
+    @Column(name = "STREET_NAME")
     private String streetName;
+    @Column(name = "STREET_NUMBER")
     private String streetNumber;
+    @ManyToOne
+    @JoinColumn(name = "POSTALCODE_ID")
     private PostalCode postalCode;
 
     public Address(long addressId, String streetName, String streetNumber, PostalCode postalCode) {

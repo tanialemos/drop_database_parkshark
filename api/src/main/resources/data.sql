@@ -1,6 +1,18 @@
-Insert into PERSONS (PERSON_ID,FAVORITE_COLOR,FIRST_NAME,LAST_NAME) values ('1','Yellow','Renaud','Berthet');
-Insert into PERSONS (PERSON_ID,FAVORITE_COLOR,FIRST_NAME,LAST_NAME) values ('2','CovFefe','Donald','Trump');
-Insert into PERSONS (PERSON_ID,FAVORITE_COLOR,FIRST_NAME,LAST_NAME) values ('3','Brown','Manfred','TheePot');
-Insert into PERSONS (PERSON_ID,FAVORITE_COLOR,FIRST_NAME,LAST_NAME) values ('4','Red','Indiana','Poulos');
-Insert into PERSONS (PERSON_ID,FAVORITE_COLOR,FIRST_NAME,LAST_NAME) values ('5','Blue','Thuyr','Karbur');
-Insert into PERSONS (PERSON_ID,FAVORITE_COLOR,FIRST_NAME,LAST_NAME) values ('6','Cyan','John','Lee');
+-- TABLE POSTALCODE
+
+INSERT INTO POSTALCODE(POSTALCODE_ID, POSTALCODE, POSTALCODE_LABEL)
+VALUES (nextval('postalcode_seq'), '1000', 'Bruxelles');
+INSERT INTO POSTALCODE(POSTALCODE_ID, POSTALCODE, POSTALCODE_LABEL)
+VALUES (nextval('postalcode_seq'), '1030', 'Schaarbeek');
+INSERT INTO POSTALCODE(POSTALCODE_ID, POSTALCODE, POSTALCODE_LABEL)
+VALUES (nextval('postalcode_seq'), '1050', 'Ixelles');
+
+-- TABLE ADDRESSES
+
+INSERT INTO ADDRESSES(ADDRESS_ID, STREET_NAME, STREET_NUMBER, POSTALCODE_ID)
+VALUES (nextval('addresses_seq'), 'Boulevard Anspach', '5', '1');
+
+-- TABLE PERSON_DETAILS
+
+INSERT INTO PERSON_DETAILS(PERSON_DETAILS_ID, FIRST_STREET_NAME, LAST_NAME, EMAIL, ADDRESS_ID, MOBILE_PHONE)
+VALUES (nextval('person_details_seq'), 'Peter', 'Parker', 'peter.parker@gmail.com', 1, 0032487545856);
