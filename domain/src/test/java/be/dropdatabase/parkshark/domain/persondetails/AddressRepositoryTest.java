@@ -23,7 +23,7 @@ public class AddressRepositoryTest {
     @Transactional
     public void save_willSaveAddressToDatabase() {
         PostalCode pc = new PostalCode("5000", "Mons");
-        Address actualAddress = new Address("Rue de la Montagne", "25", pc);
+        Address actualAddress = new AddressBuilder().setStreetName("Rue de la Montagne").setStreetNumber("25").setPostalCode(pc).createAddress();
         addressRepository.save(actualAddress);
 
         Assertions.assertThat(actualAddress.getAddressId()).isNotNull();

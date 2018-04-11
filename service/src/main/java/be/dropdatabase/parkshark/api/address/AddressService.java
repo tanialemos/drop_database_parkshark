@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.service.address;
+package be.dropdatabase.parkshark.api.address;
 
 import be.dropdatabase.parkshark.domain.address.Address;
 import be.dropdatabase.parkshark.domain.address.AddressRepository;

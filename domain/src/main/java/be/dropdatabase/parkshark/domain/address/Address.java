@@ -22,7 +22,7 @@ public class Address {
     public Address() {
     }
 
-    public Address(String streetName, String streetNumber, PostalCode postalCode) {
+    private Address(String streetName, String streetNumber, PostalCode postalCode) {
         this.streetName = streetName;
         this.streetNumber = streetNumber;
         this.postalCode = postalCode;
@@ -42,5 +42,35 @@ public class Address {
 
     public PostalCode getPostalCode() {
         return postalCode;
+    }
+
+
+    public static class AddressBuilder {
+        private String streetName;
+        private String streetNumber;
+        private PostalCode postalCode;
+
+        public static AddressBuilder buildAddress(){
+            return new AddressBuilder();
+        }
+
+        public AddressBuilder withStreetName(String streetName) {
+            this.streetName = streetName;
+            return this;
+        }
+
+        public AddressBuilder withStreetNumber(String streetNumber) {
+            this.streetNumber = streetNumber;
+            return this;
+        }
+
+        public AddressBuilder withPostalCode(PostalCode postalCode) {
+            this.postalCode = postalCode;
+            return this;
+        }
+
+        public Address createAddress() {
+            return new Address(streetName, streetNumber, postalCode);
+        }
     }
 }
