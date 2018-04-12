@@ -13,5 +13,20 @@
     <groupId>be.dropdatabase.parkshark</groupId>
     <artifactId>domain</artifactId>
     <version>1.0</version>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.0.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.0.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>be.dropdatabase.parkshark</groupId>
+            <artifactId>utilities</artifactId>
+        </dependency>
+    </dependencies>
 </project>
