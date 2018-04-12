@@ -28,7 +28,11 @@ public class DivisionRepositoryTest {
     }
     @Test
     public void getByID() {
-        Division savedDivision = divisionRepository.createDivision(new Division("Pomme","Poire","John Malkovik", null));
+        Division savedDivision = divisionRepository.createDivision(new Division
+                .DivisionBuilder().withDivisionName("Pomme")
+                .withOriginalnName("Poire")
+                .withDirector("John Malkovik")
+                .withParentDivision(null).build());
         System.out.println(savedDivision.getDivisionId());
         Division searchecDivision = divisionRepository.findByName("Pomme");
         Assertions.assertThat(savedDivision).isEqualToComparingFieldByFieldRecursively(searchecDivision);

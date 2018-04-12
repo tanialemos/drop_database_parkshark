@@ -30,9 +30,6 @@ public class Division {
         this.parentDivision = divisionBuilder.parentDivision;
     }
 
-    public long getDivisionId() {
-        return divisionId;
-    }
 
     public Division getParentDivision() {
         return parentDivision;

@@ -5,8 +5,11 @@ import be.dropdatabase.parkshark.domain.division.DivisionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 
 @Service
+@Transactional
 public class DivisionService {
 
     private DivisionRepository divisionRepository;
@@ -18,7 +21,7 @@ public class DivisionService {
 
     public Division createDivision(Division division){
         if(isADivisionFieldNull(division)){
-            throw new IllegalArgumentException("All field Must be set!");
+            throw new IllegalArgumentException("All field must be set!");
         }
         return divisionRepository.createDivision(division);
     }
