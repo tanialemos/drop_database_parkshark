@@ -37,4 +37,27 @@ public class PostalCode {
     public String getPostalCode() {
         return postalCode;
     }
+
+    public static class PostalCodeBuilder {
+        private String postalCode;
+        private String postalCodeLabel;
+
+        public static PostalCodeBuilder buildPostalCode(){
+            return new PostalCodeBuilder();
+        }
+
+        public PostalCodeBuilder withPostalCode(String postalCode) {
+            this.postalCode = postalCode;
+            return this;
+        }
+
+        public PostalCodeBuilder withPostalCodeLabel(String postalCodeLabel) {
+            this.postalCodeLabel = postalCodeLabel;
+            return this;
+        }
+
+        public PostalCode createPostalCode() {
+            return new PostalCode(postalCode, postalCodeLabel);
+        }
+    }
 }

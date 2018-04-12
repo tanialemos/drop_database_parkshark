@@ -22,6 +22,7 @@ public class AddressService {
     }
 
     public Address saveAddress(Address address){
+        postalCodeRepository.save(address.getPostalCode());
         return addressRepository.save(address);
     }
 
