@@ -23,11 +23,56 @@ public class Division {
 
     public Division() {
     }
-    public Division(String divisionName, String originalName, String director, Division parentDivision) {
-        this.divisionName = divisionName;
-        this.originalName = originalName;
-        this.director = director;
-        this.parentDivision = parentDivision;
+    private Division(DivisionBuilder divisionBuilder) {
+        this.divisionName = divisionBuilder.divisionName;
+        this.originalName = divisionBuilder.originalName;
+        this.director = divisionBuilder.director;
+        this.parentDivision = divisionBuilder.parentDivision;
+    }
+
+
+    public Division getParentDivision() {
+        return parentDivision;
+    }
+
+    public String getDivisionName() {
+        return divisionName;
+    }
+
+    public String getOriginalName() {
+        return originalName;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public static class DivisionBuilder{
+        private String divisionName;
+        private String originalName;
+        private String director;
+        private  Division parentDivision;
+
+        public DivisionBuilder withDivisionName(String divisionName){
+            this.divisionName = divisionName;
+            return this;
+        }
+
+        public DivisionBuilder withOriginalnName(String originalName){
+            this.originalName = originalName;
+            return this;
+        }
+        public DivisionBuilder withDirector(String director){
+            this.director = director;
+            return this;
+        }
+        public DivisionBuilder withParentDivision(Division division){
+            this.parentDivision=division;
+            return this;
+        }
+        public Division build(){
+            return new Division(this);
+        }
     }
 
     public long getDivisionId() {
