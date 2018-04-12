@@ -17,7 +17,8 @@ public class Division {
     private String originalName;
     @Column(name = "DIRECTOR")
     private String director;
-    @Column(name = "PARENT_DIVISION_ID")
+    @ManyToOne
+    @JoinColumn(name = "PARENT_DIVISION_ID")
     private Division parentDivision;
 
     public Division() {
@@ -27,5 +28,20 @@ public class Division {
         this.originalName = originalName;
         this.director = director;
         this.parentDivision = parentDivision;
+    }
+
+    public long getDivisionId() {
+        return divisionId;
+    }
+
+    @Override
+    public String toString() {
+        return "Division{" +
+                "divisionId=" + divisionId +
+                ", divisionName='" + divisionName + '\'' +
+                ", originalName='" + originalName + '\'' +
+                ", director='" + director + '\'' +
+                ", parentDivision=" + parentDivision +
+                '}';
     }
 }

@@ -1,4 +1,4 @@
 package be.dropdatabase.parkshark.utilities;
 
-public class utilis {
+public class Dummy {
 }
