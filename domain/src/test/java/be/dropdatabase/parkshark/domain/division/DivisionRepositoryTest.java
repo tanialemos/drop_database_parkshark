@@ -36,9 +36,15 @@ public class DivisionRepositoryTest {
 
     @Test
     public void saveDivision() {
-        Division savedDivision = divisionRepository.createDivision(new Division());
-        System.out.println(savedDivision.getDivisionId());
+        Division savedDivision = divisionRepository.createDivision(new Division.DivisionBuilder()
+                .withDivisionName("Pomme")
+                .withOriginalnName("Poire")
+                .withDirector("John Malkovik")
+                .withParentDivision(null).build());
         assertThat(savedDivision.getDivisionId()).isNotNull();
+        assertThat(savedDivision.getDivisionName()).isEqualTo("Pomme");
+        assertThat(savedDivision.getDirector()).isEqualTo("John Malkovik");
+        assertThat(savedDivision.getOriginalName()).isEqualTo("Poire");
     }
 
     @Test
@@ -72,7 +78,6 @@ public class DivisionRepositoryTest {
                 .isEqualTo(2)
                 .returnToIterable()
                 .contains(division1,division2);
-
     }
 
 
