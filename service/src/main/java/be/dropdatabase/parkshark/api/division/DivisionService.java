@@ -21,7 +21,7 @@ public class DivisionService {
 
     public Division createDivision(Division division){
         if(isADivisionFieldNull(division)){
-            throw new IllegalArgumentException("All field must be set!");
+            throw new IllegalArgumentException("All fields must be set!");
         }
         return divisionRepository.createDivision(division);
     }
@@ -29,8 +29,7 @@ public class DivisionService {
     public boolean isADivisionFieldNull(Division division){
         return division.getDivisionName()==null
                 || division.getOriginalName()==null
-                || division.getDirector()==null
-                || division.getDivisionName()==null;
+                || division.getDirector()==null;
     }
 
 

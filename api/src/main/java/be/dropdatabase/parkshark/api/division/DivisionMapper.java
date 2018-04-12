@@ -17,12 +17,14 @@ public class DivisionMapper {
 
     public DivisionDto divisionTodivisionDtoWithoutParentCompanyName(Division division){
         return new DivisionDto()
+                .withId(division.getDivisionId())
                 .withDivisionName(division.getDivisionName())
                 .withOriginalName(division.getOriginalName())
                 .withDirector(division.getDirector());
     }
     public DivisionDto divisionTodivisionDtoWithParentCompanyName(Division aDivision){
         return new DivisionDto()
+                .withId(aDivision.getDivisionId())
                 .withDivisionName(aDivision.getDivisionName())
                 .withOriginalName(aDivision.getOriginalName())
                 .withDirector(aDivision.getDirector())

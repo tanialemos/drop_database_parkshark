@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import static org.springframework.boot.SpringApplication.run;
 
-@SpringBootApplication( scanBasePackages = {"be.dropdatabase.parkshark"})
+@SpringBootApplication(scanBasePackages = {"be.dropdatabase.parkshark"})
 @EntityScan({"be.dropdatabase.parkshark"})
 public class Application {
 
