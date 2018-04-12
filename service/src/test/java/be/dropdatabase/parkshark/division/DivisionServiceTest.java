@@ -39,4 +39,10 @@ public class DivisionServiceTest {
         assertThat(divisionService.createDivision(division)).isEqualTo(division);
     }
 
+    @Test
+    public void getAllDivisions_whenCalled_callgetAllDivisionsInRepository(){
+        divisionService.getAllDivisions();
+        verify(divisionRepository,times(1)).getAllDivisions();
+    }
+
 }

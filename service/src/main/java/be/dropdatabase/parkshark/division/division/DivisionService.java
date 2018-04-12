@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 
 @Service
@@ -31,5 +32,7 @@ public class DivisionService {
     }
 
 
-
+    public List<Division> getAllDivisions() {
+        return divisionRepository.getAllDivisions();
+    }
 }
