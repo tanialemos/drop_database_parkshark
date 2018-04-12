@@ -1,9 +1,7 @@
-package be.dropdatabase.parkshark.api.persondetails;
+package be.dropdatabase.parkshark.division.persondetails;
 
-import be.dropdatabase.parkshark.domain.address.AddressRepository;
-import be.dropdatabase.parkshark.domain.address.PostalCodeRepository;
-import be.dropdatabase.parkshark.domain.persondetails.PersonDetails;
-import be.dropdatabase.parkshark.domain.persondetails.PersonDetailsRepository;
+import be.dropdatabase.parkshark.division.address.AddressRepository;
+import be.dropdatabase.parkshark.division.address.PostalCodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

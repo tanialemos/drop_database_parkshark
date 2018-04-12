@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.api;
+package be.dropdatabase.parkshark.division;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;

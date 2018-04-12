@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.api;
+package be.dropdatabase.parkshark.division;
 
 import be.dropdatabase.parkshark.utilities.exceptions.ParkSharkIllegalFieldFoundException;
 import be.dropdatabase.parkshark.utilities.exceptions.ParkSharkUnknownResourceException;

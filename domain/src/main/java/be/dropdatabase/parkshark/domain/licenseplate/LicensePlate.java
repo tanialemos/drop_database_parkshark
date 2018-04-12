@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.domain.licenseplate;
+package be.dropdatabase.parkshark.division.licenseplate;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

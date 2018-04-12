@@ -1,6 +1,5 @@
-package be.dropdatabase.parkshark.api.division;
+package be.dropdatabase.parkshark.division.division;
 
-import be.dropdatabase.parkshark.domain.division.Division;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

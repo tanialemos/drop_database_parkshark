@@ -1,6 +1,5 @@
-package be.dropdatabase.parkshark.api.division;
+package be.dropdatabase.parkshark.division.division;
 
-import be.dropdatabase.parkshark.domain.division.Division;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)

@@ -1,8 +1,6 @@
-package be.dropdatabase.parkshark.api.address;
+package be.dropdatabase.parkshark.division.address;
 
-import be.dropdatabase.parkshark.domain.address.PostalCode;
-
-import static be.dropdatabase.parkshark.domain.address.PostalCode.PostalCodeBuilder.buildPostalCode;
+import static be.dropdatabase.parkshark.division.address.PostalCode.PostalCodeBuilder.buildPostalCode;
 
 public class PostalCodeMapper {
 

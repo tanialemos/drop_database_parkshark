@@ -1,6 +1,6 @@
-package be.dropdatabase.parkshark.api.persondetails;
+package be.dropdatabase.parkshark.division.persondetails;
 
-import be.dropdatabase.parkshark.api.address.AddressDto;
+import be.dropdatabase.parkshark.division.address.AddressDto;
 
 public class PersonDetailsDto {
 

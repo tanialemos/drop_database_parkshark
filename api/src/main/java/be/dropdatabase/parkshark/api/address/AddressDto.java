@@ -1,6 +1,4 @@
-package be.dropdatabase.parkshark.api.address;
-
-import be.dropdatabase.parkshark.domain.address.PostalCode;
+package be.dropdatabase.parkshark.division.address;
 
 public class AddressDto {
 

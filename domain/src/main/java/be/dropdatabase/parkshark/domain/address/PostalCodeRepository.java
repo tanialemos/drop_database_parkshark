@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.domain.address;
+package be.dropdatabase.parkshark.division.address;
 
 import org.springframework.stereotype.Repository;
 

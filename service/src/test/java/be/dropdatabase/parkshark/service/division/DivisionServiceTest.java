@@ -1,17 +1,15 @@
-package be.dropdatabase.parkshark.api.division;
+package be.dropdatabase.parkshark.division;
 
-import be.dropdatabase.parkshark.domain.division.Division;
-import be.dropdatabase.parkshark.domain.division.DivisionRepository;
-import org.assertj.core.api.Assertions;
+import be.dropdatabase.parkshark.division.division.DivisionService;
+import be.dropdatabase.parkshark.division.division.Division;
+import be.dropdatabase.parkshark.division.division.DivisionRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)

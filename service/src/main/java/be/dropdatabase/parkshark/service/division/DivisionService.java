@@ -1,7 +1,5 @@
-package be.dropdatabase.parkshark.api.division;
+package be.dropdatabase.parkshark.division.division;
 
-import be.dropdatabase.parkshark.domain.division.Division;
-import be.dropdatabase.parkshark.domain.division.DivisionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
