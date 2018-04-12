@@ -29,7 +29,7 @@ public class PersonDetails {
 
     public PersonDetails(){}
 
-    public PersonDetails(long personDetailsId, String firstName, String lastName, String email, Address address, String mobilePhone, String fixedPhone) {
+    private PersonDetails(long personDetailsId, String firstName, String lastName, String email, Address address, String mobilePhone, String fixedPhone) {
         this.personDetailsId = personDetailsId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,5 +65,59 @@ public class PersonDetails {
 
     public String getFixedPhone() {
         return fixedPhone;
+    }
+
+    public static class PersonDetailsBuilder {
+        private long personDetailsId;
+        private String firstName;
+        private String lastName;
+        private String email;
+        private Address address;
+        private String mobilePhone;
+        private String fixedPhone;
+
+        public static PersonDetailsBuilder personDetailsBuilder() {
+            return new PersonDetailsBuilder();
+        }
+
+
+        public PersonDetailsBuilder setPersonDetailsId(long personDetailsId) {
+            this.personDetailsId = personDetailsId;
+            return this;
+        }
+
+        public PersonDetailsBuilder setFirstName(String firstName) {
+            this.firstName = firstName;
+            return this;
+        }
+
+        public PersonDetailsBuilder setLastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
+
+        public PersonDetailsBuilder setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public PersonDetailsBuilder setAddress(Address address) {
+            this.address = address;
+            return this;
+        }
+
+        public PersonDetailsBuilder setMobilePhone(String mobilePhone) {
+            this.mobilePhone = mobilePhone;
+            return this;
+        }
+
+        public PersonDetailsBuilder setFixedPhone(String fixedPhone) {
+            this.fixedPhone = fixedPhone;
+            return this;
+        }
+
+        public PersonDetails createPersonDetails() {
+            return new PersonDetails(personDetailsId, firstName, lastName, email, address, mobilePhone, fixedPhone);
+        }
     }
 }
