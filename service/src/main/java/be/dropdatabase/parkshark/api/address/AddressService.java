@@ -2,6 +2,7 @@ package be.dropdatabase.parkshark.api.address;
 
 import be.dropdatabase.parkshark.domain.address.Address;
 import be.dropdatabase.parkshark.domain.address.AddressRepository;
+import be.dropdatabase.parkshark.domain.address.PostalCode;
 import be.dropdatabase.parkshark.domain.address.PostalCodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,11 @@ public class AddressService {
         postalCodeRepository.save(address.getPostalCode());
         return addressRepository.save(address);
     }
+
+//    public PostalCode findPostalCodeByPostalCode(String postalCode){
+//        return entityManager.createQuery("from PostalCode p where postalCode = :postalCode", PostalCode.class)
+//                .setParameter("postalCode", postalCode)
+//                .getSingleResult();
+//    }
 
 }

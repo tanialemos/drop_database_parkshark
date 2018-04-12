@@ -16,10 +16,8 @@ public class PostalCodeRepository {
     private EntityManager entityManager;
 
     public PostalCode save(PostalCode postalCode){
-        if (isNull(findPostalCodeByPostalCode(postalCode.getPostalCode()))) {
-            entityManager.persist(postalCode);
-        }
-        return findPostalCodeById(postalCode.getPostalCodeId());
+        entityManager.persist(postalCode);
+        return postalCode;
     }
 
     public PostalCode findPostalCodeById(long id){
