@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import static org.springframework.boot.SpringApplication.run;
 
-@SpringBootApplication( scanBasePackages = {"be.dropdatabase.parkshark.api","be.dropdatabase.parkshark.service","be.dropdatabase.parkshark.domain","be.dropdatabase.parkshark.utilities"} )
+@SpringBootApplication( scanBasePackages = {"be.dropdatabase.parkshark"} )
 public class Application {
 
     public static void main(String[] args) {
