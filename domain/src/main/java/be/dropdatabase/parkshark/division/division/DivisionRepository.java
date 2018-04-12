@@ -1,9 +1,13 @@
 package be.dropdatabase.parkshark.division.division;
 
+import org.hibernate.JDBCException;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceException;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 @Repository
@@ -12,7 +16,8 @@ public class DivisionRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public Division createDivision(Division division){
+    public Division createDivision(Division division) throws PersistenceException{
+
         entityManager.persist(division);
         return division;
     }

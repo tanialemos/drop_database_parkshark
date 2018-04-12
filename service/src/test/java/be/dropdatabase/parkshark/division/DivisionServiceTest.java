@@ -9,6 +9,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import javax.persistence.PersistenceException;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -33,14 +37,14 @@ public class DivisionServiceTest {
     @Test
     public void createDivision_whenAllFielAreSetExceptedParentDivision_createADivision(){
         Division division = new Division.DivisionBuilder().withDivisionName("hey")
-                .withDirector("ho").withOriginalnName("hoho").build();
+                .withDirector("ho").withOriginalName("hoho").build();
         when(divisionRepository.createDivision(division)).thenReturn(division);
 
         assertThat(divisionService.createDivision(division)).isEqualTo(division);
     }
 
     @Test
-    public void getAllDivisions_whenCalled_callgetAllDivisionsInRepository(){
+    public void getAllDivisions_whenCalled_callGetAllDivisionsInRepository(){
         divisionService.getAllDivisions();
         verify(divisionRepository,times(1)).getAllDivisions();
     }

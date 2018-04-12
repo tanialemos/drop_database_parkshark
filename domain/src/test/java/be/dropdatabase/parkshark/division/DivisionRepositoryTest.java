@@ -12,6 +12,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.persistence.PersistenceException;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+
 import static org.assertj.core.api.Assertions.*;
 
 
@@ -34,10 +38,10 @@ public class DivisionRepositoryTest {
 
 
     @Test
-    public void saveDivision() {
+    public void saveDivision(){
         Division savedDivision = divisionRepository.createDivision(new Division.DivisionBuilder()
                 .withDivisionName("Pomme")
-                .withOriginalnName("Poire")
+                .withOriginalName("Poire")
                 .withDirector("John Malkovik")
                 .withParentDivision(null).build());
         assertThat(savedDivision.getDivisionId()).isNotNull();
@@ -50,7 +54,7 @@ public class DivisionRepositoryTest {
     public void getByID() {
         Division savedDivision = divisionRepository.createDivision(new Division
                 .DivisionBuilder().withDivisionName("Pomme")
-                .withOriginalnName("Poire")
+                .withOriginalName("Poire")
                 .withDirector("John Malkovik")
                 .withParentDivision(null).build());
         System.out.println(savedDivision.getDivisionId());
@@ -63,12 +67,12 @@ public class DivisionRepositoryTest {
     public void getAllDivisions() {
         Division division1 = divisionRepository.createDivision(new Division
                 .DivisionBuilder().withDivisionName("dude")
-                .withOriginalnName("dudy")
+                .withOriginalName("dudy")
                 .withDirector("dude1")
                 .withParentDivision(null).build());
         Division division2 = divisionRepository.createDivision(new Division
                         .DivisionBuilder().withDivisionName("Pomme")
-                        .withOriginalnName("Poire")
+                        .withOriginalName("Poire")
                         .withDirector("John Malkovik")
                         .withParentDivision(null).build());
 

@@ -58,7 +58,7 @@ public class Division {
             return this;
         }
 
-        public DivisionBuilder withOriginalnName(String originalName){
+        public DivisionBuilder withOriginalName(String originalName){
             this.originalName = originalName;
             return this;
         }
