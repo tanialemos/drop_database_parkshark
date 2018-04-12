@@ -1,7 +1,5 @@
-package be.dropdatabase.parkshark.division;
+package be.dropdatabase.parkshark.domain.division;
 
-import be.dropdatabase.parkshark.division.division.Division;
-import be.dropdatabase.parkshark.division.division.DivisionRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 @RunWith(SpringRunner.class)

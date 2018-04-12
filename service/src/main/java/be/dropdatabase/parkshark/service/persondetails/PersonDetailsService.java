@@ -1,7 +1,9 @@
-package be.dropdatabase.parkshark.division.persondetails;
+package be.dropdatabase.parkshark.service.persondetails;
 
-import be.dropdatabase.parkshark.division.address.AddressRepository;
-import be.dropdatabase.parkshark.division.address.PostalCodeRepository;
+import be.dropdatabase.parkshark.domain.address.AddressRepository;
+import be.dropdatabase.parkshark.domain.address.PostalCodeRepository;
+import be.dropdatabase.parkshark.domain.persondetails.PersonDetails;
+import be.dropdatabase.parkshark.domain.persondetails.PersonDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +24,7 @@ public class PersonDetailsService {
         this.postalCodeRepository = postalCodeRepository;
     }
 
-    public PersonDetails savePersonDetails(PersonDetails personDetails){
+    public PersonDetails savePersonDetails(PersonDetails personDetails) {
         return personDetailsRepository.save(personDetails);
     }
 }

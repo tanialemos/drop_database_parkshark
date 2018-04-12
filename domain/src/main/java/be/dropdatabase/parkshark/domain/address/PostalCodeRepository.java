@@ -1,12 +1,10 @@
-package be.dropdatabase.parkshark.division.address;
+package be.dropdatabase.parkshark.domain.address;
 
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-
-import static java.util.Objects.isNull;
 
 @Repository
 @Transactional

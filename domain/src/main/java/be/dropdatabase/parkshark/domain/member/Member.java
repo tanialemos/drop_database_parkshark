@@ -1,7 +1,8 @@
-package be.dropdatabase.parkshark.division.member;
+package be.dropdatabase.parkshark.domain.member;
 
-import be.dropdatabase.parkshark.division.licenseplate.LicensePlate;
-import be.dropdatabase.parkshark.division.persondetails.PersonDetails;
+
+import be.dropdatabase.parkshark.domain.licenseplate.LicensePlate;
+import be.dropdatabase.parkshark.domain.persondetails.PersonDetails;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
