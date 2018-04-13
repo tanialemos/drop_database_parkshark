@@ -3,8 +3,6 @@ package be.dropdatabase.parkshark.api.address;
 import be.dropdatabase.parkshark.domain.address.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static be.dropdatabase.parkshark.domain.address.Address.AddressBuilder.buildAddress;
-
 public class AddressMapper {
 
     @Autowired
@@ -18,7 +16,7 @@ public class AddressMapper {
     }
 
     public Address mapToDomain(AddressDto addressDto){
-        return buildAddress()
+        return new Address.AddressBuilder()
                 .withStreetName(addressDto.getStreetName())
                 .withStreetNumber(addressDto.getStreetNumber())
                 .withPostalCode(postalCodeMapper.mapToDomain(addressDto.getPostalCode()))

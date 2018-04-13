@@ -12,7 +12,7 @@ public class PersonDetailsMapper {
     private PersonDetailsMapper personDetailsMapper;
     private AddressMapper addressMapper;
 
-    public PersonDetailsDto mapToDto(PersonDetails personDetails){
+    public PersonDetailsDto mapToDto(PersonDetails personDetails) {
         return new PersonDetailsDto()
                 .withFirstName(personDetails.getFirstName())
                 .withLastName(personDetails.getLastName())
@@ -22,7 +22,7 @@ public class PersonDetailsMapper {
                 .withMobilePhone(personDetails.getMobilePhone());
     }
 
-    public PersonDetails mapToDomain(PersonDetailsDto personDetailsDto){
+    public PersonDetails mapToDomain(PersonDetailsDto personDetailsDto) {
         return personDetailsBuilder()
                 .setFirstName(personDetailsDto.getFirstName())
                 .setLastName(personDetailsDto.getLastName())

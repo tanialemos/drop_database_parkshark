@@ -1,5 +1,6 @@
 package be.dropdatabase.parkshark.domain.member;
 
+
 import be.dropdatabase.parkshark.domain.licenseplate.LicensePlate;
 import be.dropdatabase.parkshark.domain.persondetails.PersonDetails;
 

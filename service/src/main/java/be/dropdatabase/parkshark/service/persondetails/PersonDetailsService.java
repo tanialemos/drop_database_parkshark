@@ -24,7 +24,7 @@ public class PersonDetailsService {
         this.postalCodeRepository = postalCodeRepository;
     }
 
-    public PersonDetails savePersonDetails(PersonDetails personDetails){
+    public PersonDetails savePersonDetails(PersonDetails personDetails) {
         return personDetailsRepository.save(personDetails);
     }
 }
