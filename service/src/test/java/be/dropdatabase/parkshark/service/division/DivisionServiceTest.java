@@ -6,10 +6,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -33,10 +36,16 @@ public class DivisionServiceTest {
     @Test
     public void createDivision_whenAllFielAreSetExceptedParentDivision_createADivision() {
         Division division = new Division.DivisionBuilder().withDivisionName("hey")
-                .withDirector("ho").withOriginalnName("hoho").build();
+                .withDirector("ho").withOriginalName("hoho").build();
         when(divisionRepository.createDivision(division)).thenReturn(division);
 
         assertThat(divisionService.createDivision(division)).isEqualTo(division);
+    }
+
+    @Test
+    public void getAllDivisions_whenCalled_callGetAllDivisionsInRepository(){
+        divisionService.getAllDivisions();
+        Mockito.verify(divisionRepository,times(1)).getAllDivisions();
     }
 
 }
