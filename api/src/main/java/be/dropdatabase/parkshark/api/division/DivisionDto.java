@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.division.division;
+package be.dropdatabase.parkshark.api.division;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

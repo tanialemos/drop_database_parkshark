@@ -1,4 +1,6 @@
-package be.dropdatabase.parkshark.division.division;
+package be.dropdatabase.parkshark.api.division;
+
+import be.dropdatabase.parkshark.domain.division.Division;
 
 import javax.inject.Named;
 

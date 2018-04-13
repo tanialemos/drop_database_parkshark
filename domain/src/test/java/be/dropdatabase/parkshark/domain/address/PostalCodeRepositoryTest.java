@@ -1,5 +1,7 @@
 package be.dropdatabase.parkshark.domain.address;
 
+import be.dropdatabase.parkshark.domain.address.PostalCode;
+import be.dropdatabase.parkshark.domain.address.PostalCodeRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,8 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

@@ -1,5 +1,8 @@
 package be.dropdatabase.parkshark.domain.address;
 
+import be.dropdatabase.parkshark.domain.address.Address;
+import be.dropdatabase.parkshark.domain.address.AddressRepository;
+import be.dropdatabase.parkshark.domain.address.PostalCode;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;

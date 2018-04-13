@@ -1,8 +1,8 @@
-package be.dropdatabase.parkshark.division;
+package be.dropdatabase.parkshark.service.division;
 
-import be.dropdatabase.parkshark.division.division.DivisionService;
-import be.dropdatabase.parkshark.division.division.Division;
-import be.dropdatabase.parkshark.division.division.DivisionRepository;
+import be.dropdatabase.parkshark.domain.division.Division;
+import be.dropdatabase.parkshark.domain.division.DivisionRepository;
+import be.dropdatabase.parkshark.service.division.DivisionService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

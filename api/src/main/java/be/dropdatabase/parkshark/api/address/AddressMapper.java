@@ -1,8 +1,9 @@
-package be.dropdatabase.parkshark.division.address;
+package be.dropdatabase.parkshark.api.address;
 
+import be.dropdatabase.parkshark.domain.address.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static be.dropdatabase.parkshark.division.address.Address.AddressBuilder.buildAddress;
+import static be.dropdatabase.parkshark.domain.address.Address.AddressBuilder.buildAddress;
 
 public class AddressMapper {
 

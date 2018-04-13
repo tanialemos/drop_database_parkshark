@@ -1,7 +1,7 @@
-package be.dropdatabase.parkshark.division;
+package be.dropdatabase.parkshark.domain.division;
 
-import be.dropdatabase.parkshark.division.division.Division;
-import be.dropdatabase.parkshark.division.division.DivisionRepository;
+import be.dropdatabase.parkshark.domain.division.Division;
+import be.dropdatabase.parkshark.domain.division.DivisionRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;

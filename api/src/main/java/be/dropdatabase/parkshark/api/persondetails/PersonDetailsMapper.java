@@ -1,9 +1,10 @@
-package be.dropdatabase.parkshark.division.persondetails;
+package be.dropdatabase.parkshark.api.persondetails;
 
-import be.dropdatabase.parkshark.division.address.AddressMapper;
+import be.dropdatabase.parkshark.api.address.AddressMapper;
+import be.dropdatabase.parkshark.domain.persondetails.PersonDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static be.dropdatabase.parkshark.division.persondetails.PersonDetails.PersonDetailsBuilder.personDetailsBuilder;
+import static be.dropdatabase.parkshark.domain.persondetails.PersonDetails.PersonDetailsBuilder.personDetailsBuilder;
 
 public class PersonDetailsMapper {
 

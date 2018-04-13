@@ -1,6 +1,6 @@
-package be.dropdatabase.parkshark.division;
+package be.dropdatabase.parkshark.api.division;
 
-import be.dropdatabase.parkshark.division.division.DivisionDto;
+import be.dropdatabase.parkshark.api.Application;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,7 +8,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static be.dropdatabase.parkshark.division.division.DivisionDto.DivisionDto;
+import static be.dropdatabase.parkshark.api.division.DivisionDto.DivisionDto;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
