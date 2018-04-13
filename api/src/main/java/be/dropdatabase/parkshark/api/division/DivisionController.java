@@ -28,8 +28,8 @@ public class DivisionController {
     @ResponseStatus(HttpStatus.CREATED)
     public DivisionDto createDivision(@RequestBody DivisionDto division) {
             Division division1 = divisionService.createDivision(divisionMapper
-                    .divisionDtoTodivisionObject(division));
-            return divisionMapper.divisionTodivisionDtoWithoutParentCompanyName(division1);
+                    .toDomain(division));
+            return divisionMapper.toDto(division1);
     }
 
     @GetMapping(produces = "application/json")
@@ -38,7 +38,7 @@ public class DivisionController {
         List<Division> divisions = divisionService.getAllDivisions();
         return divisions
                 .stream()
-                .map(x->divisionMapper.divisionTodivisionDtoWithoutParentCompanyName(x))
+                .map(x->divisionMapper.toDto(x))
                 .collect(Collectors.toList());
     }
 }

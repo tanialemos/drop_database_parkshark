@@ -1,40 +1,59 @@
 package be.dropdatabase.parkshark.api.division;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DivisionDto {
 
-    public long divisionId;
+    public Long divisionId;
     public String divisionName;
     public String originalName;
     public String director;
-    public String parentDivisionName;
+    public Long parentDivisionId;
 
+    public Long getDivisionId() {
+        return divisionId;
+    }
 
-    public static DivisionDto DivisionDto(){
+    public String getDivisionName() {
+        return divisionName;
+    }
+
+    public String getOriginalName() {
+        return originalName;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public static DivisionDto DivisionDto() {
         return new DivisionDto();
     }
 
-    public DivisionDto withDivisionName(String divisionName){
+    public Long getParentDivisionId() {
+        return parentDivisionId;
+    }
+
+    public DivisionDto withDivisionName(String divisionName) {
         this.divisionName = divisionName;
         return this;
     }
 
-    public DivisionDto withId(long divisionId){
+    public DivisionDto withId(Long divisionId) {
         this.divisionId = divisionId;
         return this;
     }
-    public DivisionDto withOriginalName(String originalName){
+
+    public DivisionDto withOriginalName(String originalName) {
         this.originalName = originalName;
         return this;
     }
-    public DivisionDto withDirector(String director){
+
+    public DivisionDto withDirector(String director) {
         this.director = director;
         return this;
     }
-    public DivisionDto withParentDivisionName(String parentDivisionName){
-        this.parentDivisionName = parentDivisionName;
+
+    public DivisionDto withParentDivisionId(Long parentDivisionId) {
+        this.parentDivisionId = parentDivisionId;
         return this;
     }
 }

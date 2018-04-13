@@ -10,8 +10,8 @@ public class Division {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DIVISIONS_SEQ")
     @SequenceGenerator(name = "DIVISIONS_SEQ", sequenceName = "DIVISIONS_SEQ", allocationSize = 1, initialValue = 1)
     @Column(name = "DIVISION_ID")
-    private long divisionId;
-    @Column(name="DIVISION_NAME")
+    private Long divisionId;
+    @Column(name = "DIVISION_NAME")
     private String divisionName;
     @Column(name = "ORIGINAL_NAME")
     private String originalName;
@@ -23,13 +23,14 @@ public class Division {
 
     public Division() {
     }
+
     private Division(DivisionBuilder divisionBuilder) {
+        this.divisionId = divisionBuilder.divisionId;
         this.divisionName = divisionBuilder.divisionName;
         this.originalName = divisionBuilder.originalName;
         this.director = divisionBuilder.director;
         this.parentDivision = divisionBuilder.parentDivision;
     }
-
 
     public Division getParentDivision() {
         return parentDivision;
@@ -47,35 +48,45 @@ public class Division {
         return director;
     }
 
-    public static class DivisionBuilder{
+    public static class DivisionBuilder {
+        private Long divisionId;
         private String divisionName;
         private String originalName;
         private String director;
-        private  Division parentDivision;
+        private Division parentDivision;
 
-        public DivisionBuilder withDivisionName(String divisionName){
+        public DivisionBuilder withDivisionId(Long divisionId) {
+            this.divisionId = divisionId;
+            return this;
+        }
+
+        public DivisionBuilder withDivisionName(String divisionName) {
             this.divisionName = divisionName;
             return this;
         }
 
-        public DivisionBuilder withOriginalName(String originalName){
+        public DivisionBuilder withOriginalName(String originalName) {
             this.originalName = originalName;
             return this;
         }
-        public DivisionBuilder withDirector(String director){
+
+        public DivisionBuilder withDirector(String director) {
             this.director = director;
             return this;
         }
-        public DivisionBuilder withParentDivision(Division division){
-            this.parentDivision=division;
+
+        public DivisionBuilder withParentDivision(Division division) {
+            this.parentDivision = division;
             return this;
         }
-        public Division build(){
+
+        public Division build() {
             return new Division(this);
         }
+
     }
 
-    public long getDivisionId() {
+    public Long getDivisionId() {
         return divisionId;
     }
 

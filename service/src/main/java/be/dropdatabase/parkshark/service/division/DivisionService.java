@@ -4,11 +4,9 @@ package be.dropdatabase.parkshark.service.division;
 import be.dropdatabase.parkshark.domain.division.Division;
 import be.dropdatabase.parkshark.domain.division.DivisionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-
 import java.util.List;
 
 
@@ -41,5 +39,9 @@ public class DivisionService {
 
     public List<Division> getAllDivisions() {
         return divisionRepository.getAllDivisions();
+    }
+
+    public Division findById(long parentDivisionId) {
+        return divisionRepository.findById(parentDivisionId);
     }
 }
