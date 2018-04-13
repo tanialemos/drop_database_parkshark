@@ -2,8 +2,10 @@ package be.dropdatabase.parkshark.api.address;
 
 import be.dropdatabase.parkshark.domain.address.PostalCode;
 
-import static be.dropdatabase.parkshark.domain.address.PostalCode.PostalCodeBuilder.buildPostalCode;
+import javax.inject.Named;
 
+import static be.dropdatabase.parkshark.domain.address.PostalCode.PostalCodeBuilder.buildPostalCode;
+@Named
 public class PostalCodeMapper {
 
     public PostalCodeDto mapToDto(PostalCode postalCode){
