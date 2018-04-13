@@ -2,6 +2,7 @@ package be.dropdatabase.parkshark.division;
 
 import be.dropdatabase.parkshark.utilities.exceptions.ParkSharkIllegalFieldFoundException;
 import be.dropdatabase.parkshark.utilities.exceptions.ParkSharkUnknownResourceException;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,5 +24,11 @@ public class GlobalConrollerAdvice extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(
                 exception.getMessage(),
                 HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(org.hibernate.exception.ConstraintViolationException.class)
+    public ResponseEntity<String> convertConstraintViolationException(final ConstraintViolationException exception){
+
+        return new ResponseEntity<>("A division with this name already exists", HttpStatus.BAD_REQUEST);
     }
 }
