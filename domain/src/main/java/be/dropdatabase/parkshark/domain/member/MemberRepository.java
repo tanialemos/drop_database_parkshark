@@ -1,5 +1,6 @@
 package be.dropdatabase.parkshark.domain.member;
 
+import be.dropdatabase.parkshark.domain.licenseplate.LicensePlate;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -13,7 +14,8 @@ public class MemberRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public Member save (Member member){
+    public Member save (Member member, LicensePlate licensePlate){
+        entityManager.persist(licensePlate);
         entityManager.persist(member);
         return member;
     }
