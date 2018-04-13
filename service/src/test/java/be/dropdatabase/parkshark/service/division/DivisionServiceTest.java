@@ -1,18 +1,16 @@
-package be.dropdatabase.parkshark.api.division;
+package be.dropdatabase.parkshark.service.division;
 
 import be.dropdatabase.parkshark.domain.division.Division;
 import be.dropdatabase.parkshark.domain.division.DivisionRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DivisionServiceTest {
@@ -24,16 +22,16 @@ public class DivisionServiceTest {
     private DivisionService divisionService;
 
     @Test
-    public  void createDivision_whenANullValueIsProvided_throwsException(){
+    public void createDivision_whenANullValueIsProvided_throwsException() {
         assertThatExceptionOfType(IllegalArgumentException.class)
-                .isThrownBy(()->divisionService.createDivision(new Division
+                .isThrownBy(() -> divisionService.createDivision(new Division
                         .DivisionBuilder()
                         .withDivisionName("hey").withDirector("ho")
                         .build()));
     }
 
     @Test
-    public void createDivision_whenAllFielAreSetExceptedParentDivision_createADivision(){
+    public void createDivision_whenAllFielAreSetExceptedParentDivision_createADivision() {
         Division division = new Division.DivisionBuilder().withDivisionName("hey")
                 .withDirector("ho").withOriginalnName("hoho").build();
         when(divisionRepository.createDivision(division)).thenReturn(division);

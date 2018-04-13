@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.api.division;
+package be.dropdatabase.parkshark.service.division;
 
 import be.dropdatabase.parkshark.domain.division.Division;
 import be.dropdatabase.parkshark.domain.division.DivisionRepository;

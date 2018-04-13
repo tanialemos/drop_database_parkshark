@@ -1,7 +1,5 @@
 package be.dropdatabase.parkshark.api.address;
 
-import be.dropdatabase.parkshark.domain.address.PostalCode;
-
 public class AddressDto {
 
     private String streetName;

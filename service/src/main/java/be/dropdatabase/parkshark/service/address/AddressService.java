@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.api.address;
+package be.dropdatabase.parkshark.service.address;
 
 import be.dropdatabase.parkshark.domain.address.Address;
 import be.dropdatabase.parkshark.domain.address.AddressRepository;
@@ -25,5 +25,11 @@ public class AddressService {
         postalCodeRepository.save(address.getPostalCode());
         return addressRepository.save(address);
     }
+
+//    public PostalCode findPostalCodeByPostalCode(String postalCode){
+//        return entityManager.createQuery("from PostalCode p where postalCode = :postalCode", PostalCode.class)
+//                .setParameter("postalCode", postalCode)
+//                .getSingleResult();
+//    }
 
 }

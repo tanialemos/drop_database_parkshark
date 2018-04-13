@@ -4,10 +4,9 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
-@Transactional
 public class DivisionRepository {
 
     @PersistenceContext
@@ -22,5 +21,9 @@ public class DivisionRepository {
         return entityManager.createQuery("from Division where divisionName = :divisionName", Division.class)
                 .setParameter("divisionName", divisionName)
                 .getSingleResult();
+    }
+
+    public List<Division> getAllDivisions(){
+        return entityManager.createQuery("from Division",Division.class).getResultList();
     }
 }

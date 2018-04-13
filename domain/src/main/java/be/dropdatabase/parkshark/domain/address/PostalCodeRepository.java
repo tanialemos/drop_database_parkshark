@@ -6,8 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
-import static java.util.Objects.isNull;
-
 @Repository
 @Transactional
 public class PostalCodeRepository {
@@ -16,10 +14,8 @@ public class PostalCodeRepository {
     private EntityManager entityManager;
 
     public PostalCode save(PostalCode postalCode){
-        if (isNull(findPostalCodeByPostalCode(postalCode.getPostalCode()))) {
-            entityManager.persist(postalCode);
-        }
-        return findPostalCodeById(postalCode.getPostalCodeId());
+        entityManager.persist(postalCode);
+        return postalCode;
     }
 
     public PostalCode findPostalCodeById(long id){

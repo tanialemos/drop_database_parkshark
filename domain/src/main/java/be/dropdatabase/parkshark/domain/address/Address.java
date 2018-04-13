@@ -22,7 +22,8 @@ public class Address {
     public Address() {
     }
 
-    private Address(String streetName, String streetNumber, PostalCode postalCode) {
+    private Address(long addressId, String streetName, String streetNumber, PostalCode postalCode) {
+        this.addressId = addressId;
         this.streetName = streetName;
         this.streetNumber = streetNumber;
         this.postalCode = postalCode;
@@ -46,12 +47,18 @@ public class Address {
 
 
     public static class AddressBuilder {
+        private long addressId;
         private String streetName;
         private String streetNumber;
         private PostalCode postalCode;
 
         public static AddressBuilder buildAddress(){
             return new AddressBuilder();
+        }
+
+        public AddressBuilder withAddressId(long addressId) {
+            this.addressId = addressId;
+            return this;
         }
 
         public AddressBuilder withStreetName(String streetName) {
@@ -70,7 +77,7 @@ public class Address {
         }
 
         public Address createAddress() {
-            return new Address(streetName, streetNumber, postalCode);
+            return new Address(addressId, streetName, streetNumber, postalCode);
         }
     }
 }

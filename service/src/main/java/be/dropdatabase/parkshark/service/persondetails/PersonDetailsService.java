@@ -1,4 +1,4 @@
-package be.dropdatabase.parkshark.api.persondetails;
+package be.dropdatabase.parkshark.service.persondetails;
 
 import be.dropdatabase.parkshark.domain.address.AddressRepository;
 import be.dropdatabase.parkshark.domain.address.PostalCodeRepository;
@@ -24,7 +24,7 @@ public class PersonDetailsService {
         this.postalCodeRepository = postalCodeRepository;
     }
 
-    public PersonDetails savePersonDetails(PersonDetails personDetails){
+    public PersonDetails savePersonDetails(PersonDetails personDetails) {
         return personDetailsRepository.save(personDetails);
     }
 }
