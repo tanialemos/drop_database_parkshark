@@ -22,6 +22,8 @@ public class DivisionService {
     }
 
     public Division createDivision(Division division) {
+        //todo refuse if ID is present
+        //todo filter some fields that couldn't be null
         if (isADivisionFieldNull(division)) {
             throw new IllegalArgumentException("All fields must be set!");
         }
