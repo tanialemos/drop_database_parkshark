@@ -13,7 +13,7 @@ public class LicensePlate {
 
     public LicensePlate() {}
 
-    public LicensePlate(String licensePlateNumber, String issuingCountry) {
+    private LicensePlate(String licensePlateNumber, String issuingCountry) {
         this.licensePlateNumber = licensePlateNumber;
         this.issuingCountry = issuingCountry;
     }
@@ -24,5 +24,28 @@ public class LicensePlate {
 
     public String getIssuingCountry() {
         return issuingCountry;
+    }
+
+    public static class LicensePlateBuilder {
+        private String licensePlateNumber;
+        private String issuingCountry;
+
+        public static LicensePlateBuilder licensePlateBuilder(){
+            return new LicensePlateBuilder();
+        }
+
+        public LicensePlateBuilder withLicensePlateNumber(String licensePlateNumber) {
+            this.licensePlateNumber = licensePlateNumber;
+            return this;
+        }
+
+        public LicensePlateBuilder withIssuingCountry(String issuingCountry) {
+            this.issuingCountry = issuingCountry;
+            return this;
+        }
+
+        public LicensePlate createLicensePlate() {
+            return new LicensePlate(licensePlateNumber, issuingCountry);
+        }
     }
 }
