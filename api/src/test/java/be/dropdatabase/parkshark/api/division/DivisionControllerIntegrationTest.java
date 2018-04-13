@@ -1,6 +1,6 @@
-package be.dropdatabase.parkshark.api;
+package be.dropdatabase.parkshark.api.division;
 
-import be.dropdatabase.parkshark.api.division.DivisionDto;
+import be.dropdatabase.parkshark.api.Application;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
