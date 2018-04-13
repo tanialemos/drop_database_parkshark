@@ -3,6 +3,9 @@ package be.dropdatabase.parkshark.api.address;
 import be.dropdatabase.parkshark.domain.address.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.inject.Named;
+
+@Named
 public class AddressMapper {
 
     @Autowired

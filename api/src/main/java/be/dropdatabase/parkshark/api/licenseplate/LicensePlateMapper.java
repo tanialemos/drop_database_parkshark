@@ -2,6 +2,9 @@ package be.dropdatabase.parkshark.api.licenseplate;
 
 import be.dropdatabase.parkshark.domain.licenseplate.LicensePlate;
 
+import javax.inject.Named;
+
+@Named
 public class LicensePlateMapper {
 
     public LicensePlateDto mapToDto(LicensePlate licensePlate){
