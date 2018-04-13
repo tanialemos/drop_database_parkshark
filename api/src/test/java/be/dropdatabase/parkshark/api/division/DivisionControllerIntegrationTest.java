@@ -1,9 +1,9 @@
-package be.dropdatabase.parkshark.api;
+package be.dropdatabase.parkshark.api.division;
 
+import be.dropdatabase.parkshark.api.Application;
 import be.dropdatabase.parkshark.domain.division.DivisionRepository;
 import org.assertj.core.api.Assertions;
 
-import be.dropdatabase.parkshark.api.division.DivisionDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
