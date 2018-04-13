@@ -10,7 +10,7 @@ public class DivisionMapper {
     public Division divisionDtoTodivisionObject(DivisionDto divisionDto){
         return new Division.DivisionBuilder()
                 .withDivisionName(divisionDto.divisionName)
-                .withOriginalnName(divisionDto.originalName)
+                .withOriginalName(divisionDto.originalName)
                 .withDirector(divisionDto.director)
                 .build();
     }
